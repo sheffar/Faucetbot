@@ -4,7 +4,7 @@ let console_log = 1;
 
 import puppeteer from 'puppeteer-extra'
 // const cluster = require('puppeteer-cluster');
-
+ 
 const Emma_bot = [
   {
     useragent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -59,11 +59,51 @@ console.log(proxy);
 
 (async () => {
   const browsers = await Promise.all([
-    puppeteer.launch({ headless: true }),
-    puppeteer.launch({ headless: true }),
-    puppeteer.launch({ headless: true }),
-    puppeteer.launch({ headless: true }),
-    puppeteer.launch({ headless: true }),
+    puppeteer.launch({ headless: true,  args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+        '--single-process',
+    ] }),
+    puppeteer.launch({ headless: true,  args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+        '--single-process',
+    ] }),
+    puppeteer.launch({ headless: true,  args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+        '--single-process',
+    ] }),
+    puppeteer.launch({ headless: true,  args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+        '--single-process',
+    ] }),
+    puppeteer.launch({ headless: true,  args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+        '--single-process',
+    ] }),
   ]);
 
 
