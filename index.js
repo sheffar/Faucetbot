@@ -6,22 +6,14 @@ import puppeteer from 'puppeteer-extra'
 // const cluster = require('puppeteer-cluster');
  
 const Emma_bot = [
+ 
   {
     useragent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     screenWdith: 1366,
     screenHeight: 768,
-    username: "Munir92",
-    user_n: "munir",
-    password: "Munitbako",
-    proxy: "117.2.28.235:55443"
-  },
-  {
-    useragent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    screenWdith: 1366,
-    screenHeight: 768,
-    username: "sheffard111",
-    user_n: "sheffard",
-    password: "joker",
+    username: "Reinaaaa",
+    user_n: "Reinaaaa",
+    password: "Queensley",
     proxy: "190.104.146.244:999"
   },
   {
@@ -29,28 +21,11 @@ const Emma_bot = [
     screenWdith: 1366,
     screenHeight: 768,
     username: "Olatomide Victor",
-    user_n: "olatomide",
-    password: "#n5vyun*_r9N6Sh",
-    proxy: "190.104.146.244:999"
-  },
-  {
-    useragent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    screenWdith: 1366,
-    screenHeight: 768,
-    username: "boyyy",
-    user_n: " sam neghbiour",
-    password: "FRICTION10",
-    proxy: "190.104.146.244:999"
-  },
-  {
-    useragent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    screenWdith: 1366,
-    screenHeight: 768,
-    username: "vectorviper10@gmail.com",
-    user_n: "vic",
-    password: "Communication1",
+    user_n: "eric11",
+    password: "eric11",
     proxy: "190.104.146.244:999"
   }
+
 
 ]
 const [a] = Emma_bot;
@@ -59,6 +34,15 @@ console.log(proxy);
 
 (async () => {
   const browsers = await Promise.all([
+    puppeteer.launch({ headless: false,  args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+        '--single-process',
+    ], args: ['--incognito'] }),
     puppeteer.launch({ headless: true,  args: [
         '--disable-gpu',
         '--disable-dev-shm-usage',
@@ -67,43 +51,8 @@ console.log(proxy);
         '--no-sandbox',
         '--no-zygote',
         '--single-process',
-    ] }),
-    puppeteer.launch({ headless: true,  args: [
-        '--disable-gpu',
-        '--disable-dev-shm-usage',
-        '--disable-setuid-sandbox',
-        '--no-first-run',
-        '--no-sandbox',
-        '--no-zygote',
-        '--single-process',
-    ] }),
-    puppeteer.launch({ headless: true,  args: [
-        '--disable-gpu',
-        '--disable-dev-shm-usage',
-        '--disable-setuid-sandbox',
-        '--no-first-run',
-        '--no-sandbox',
-        '--no-zygote',
-        '--single-process',
-    ] }),
-    puppeteer.launch({ headless: true,  args: [
-        '--disable-gpu',
-        '--disable-dev-shm-usage',
-        '--disable-setuid-sandbox',
-        '--no-first-run',
-        '--no-sandbox',
-        '--no-zygote',
-        '--single-process',
-    ] }),
-    puppeteer.launch({ headless: true,  args: [
-        '--disable-gpu',
-        '--disable-dev-shm-usage',
-        '--disable-setuid-sandbox',
-        '--no-first-run',
-        '--no-sandbox',
-        '--no-zygote',
-        '--single-process',
-    ] }),
+    ], args: ['--incognito']  }),
+   
   ]);
 
 
