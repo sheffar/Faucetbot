@@ -165,7 +165,7 @@ console.log(proxy);
                 setTimeout(function () {
                   if (clickButton()) {
                     // alert('success');
-                  }
+                  } 
                   if (clearInterval(intervalTimer)) {
 
                   }
